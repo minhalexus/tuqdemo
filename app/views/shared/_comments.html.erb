@@ -1,0 +1,13 @@
+
+<ul>
+    <% obj.each do |comment| %>
+        <li>
+            <p> 
+                <strong>
+                    <%= comment.user.name %>:
+                <strong> 
+                <%= comment.description %>
+            </ p>
+        </li>
+    <% end %>
+</ul>

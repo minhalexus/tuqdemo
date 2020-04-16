@@ -2,14 +2,38 @@
 <%= render 'shared/nav' %>
 
 
-<p>
+<h4>
   <strong>Title:</strong>
   <%= @blog.title %>
-</p>
+</h4>
 
-<p>
+<h4>
   <strong>Body:</strong>
+  <br>
   <%= @blog.body %>
-</p>
+</h4>
 
 <!-- <%= link_to 'Home', @blog.user %> -->
+
+<hr>
+
+<h4>
+  Comments
+</h4>
+
+
+<%= render 'shared/comments', obj: @blog.comments %>
+
+<br>
+
+<h4> New Comment </h4>
+<%= form_with(model: @comment, local: true) do |form| %>
+  <div class="field">
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

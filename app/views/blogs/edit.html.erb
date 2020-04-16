@@ -1,5 +1,8 @@
 <%= render 'shared/nav' %>
 
+<p> Logged in as: <%= @user.name %> </p>
+
+
 <h1>Editing Blog</h1>
 
 <%= render 'form', blog: @blog %>

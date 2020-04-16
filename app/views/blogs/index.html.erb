@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'shared/nav' %>
+
+<h1>Blogs</h1>
+
+<%= render 'shared/blog', obj: @blogs, show_all: true %>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>

@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'shared/nav' %>
+
+<h2> Welcome <%= @user.name %> </h2>
+
+
+<h3> <b> <%= link_to 'Create New Blog', new_blog_path %> <b> </h3>
+
+<h3> Your Blogs</h3>
+
+<%= render 'shared/blog', obj: @user.blogs, show_all: true %>
+
+<hr>
+
+<h3> All Blogs </h3>
+
+<%= render 'shared/blog', obj: @blogs, show_all: false %>
+
+
+
